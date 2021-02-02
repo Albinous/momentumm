@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  width: 100vw;
+  color: #fff;
+  background-size: cover;
+  background-position: center center;
+  transition: background-image 1s ease-in-out;
+  padding: 0 15px;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.weather {
+  color: #fff;
+  font-size: 1rem;
+  z-index:2;
+}
+
+.weather-icon {
+  font-size: 30px;
+  z-index:2;
+}
+
+.city {
+  font-size: 22px;
+  z-index:2;
+}
+
+#week {
+  font-size: 30px;
+  z-index:2;
+}
+
+#time {
+  font-size: 8rem;
+  z-index:2;
+}
+
+h1 {
+  margin-bottom: 3rem;
+  display: flex;
+  z-index:2;
+}
+
+#greeting {
+  margin-right: 10px;
+  z-index:2;
+}
+
+#name {
+  transition: all 0.2s ease-in-out;
+  z-index:2;
+}
+
+#name:hover {
+  color: #eee;
+  z-index:2;
+  cursor: pointer;
+  z-index:2;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+  z-index:2;
+}
+
+#focusp {
+  margin-bottom: 2rem;
+  transition: all 0.2s ease-in-out;
+  z-index:2;
+}
+
+#focusp:hover {
+  color: #fff;
+  cursor: pointer;
+  z-index:2;
+}
+
+.quote {
+  background: #000;
+  color: #fff;
+  padding: 7px 22px;
+  margin-bottom: 0.5rem;
+  z-index:2;
+}
+
+#quote-btn {
+  width: 35px;
+  height: 35px;
+  border: 0;
+  background: url("https://www.pngarts.com/files/7/Update-Button-PNG-Image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  transition: 0.2s all;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#quote-btn:hover {
+  filter: grayscale(.8);
+}
+
+.btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 0;
+  filter: grayscale(1);
+  margin: 20px;
+  cursor: pointer;
+  background: #eee;
+  color: #000;
+  padding: 14px 33px;
+  font-size: 17px;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 7px;
+}
+.btn:hover {
+  filter: grayscale(.8);
+  opacity: 0.8;
+}
+.btn:active,
+.btn:focus {
+  outline: 0;
+}
+.btn:active{
+  transform: scale(1.02)
+}
+
+@media(max-width: 767px) {
+  body {
+    padding-top: 80px;
+    justify-content: start;
+  }
+
+  #time {
+    font-size: 6rem;
+    margin-bottom: 20px;
+  }
+
+  .city {
+    font-size: 17px;
+  }
+
+  h1 {
+    flex-direction: column;
+    font-size: 25px;
+    margin-bottom: 2rem;
+  }
+
+  #week {
+    padding-top: 20px;
+    font-size: 24px;
+  }
+
+  #focusp {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .quote {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+@media(max-width: 320px) {
+  body {
+    padding: 7px 10px 0 10px;
+    /* padding-top: 30px; */
+  }
+
+  .weather {
+    font-size: 14px;
+  }
+
+  #time {
+    font-size: 3.5rem;
+    margin-bottom: 0;
+  }
+
+  .city {
+    font-size: 14px;
+  }
+
+  h1 {
+    display: flex;
+    font-size: 18px;
+    margin-bottom: 0.8rem;
+  }
+
+  #week {
+    padding-top: 10px;
+    font-size: 14px;
+  }
+
+  #focusp {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .quote {
+    margin-bottom: 7px;
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .btn {
+    padding: 7px 14px;
+    font-size: 14px;
+    margin: 7px;
+    display: inline-block;
+  }
+
+  .btn-wrap {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+  }
+}
